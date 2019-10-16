@@ -1,0 +1,914 @@
+# Exercise
+# print("Hello, Python!")
+# Print string and error to see the running order
+
+# print("This will be printed")
+# frint("This will cause an error")
+# print("This will NOT be printed")
+
+# print("Hello, world!") #Print hello world
+
+# print(type(12.0))
+
+# print(6/2)  #returns 3.0,  float data type
+# print(6//2) #returns 3,    int data type
+
+
+###Exercise
+###Let's write an expression that calculates how many hours there are in 160 minutes:
+
+###minutes_total = 160
+###hours_total = 160//60
+###print(hours_total)
+
+
+##Exercise
+##What is the value of x where x = 3 + 2 * 2
+
+##x = 3 + 2 * 2
+## x should be = 3 + 4 = 7, Let's see!
+
+# print(x) ## 7 is returned, so I was right.
+
+
+# Exercise
+# What is the value of y where y = (3 + 2) * 2?
+
+# y = (3 +2) * 2
+# y should be = 5 * 2 = 10, Let's see!
+# print(y) ## 10 is returned, so I was right.
+
+
+# Exercise
+# What is the value of z where z = x + y?  I will use the values from the previous two Exercises.
+# x = 7
+# y = 10
+
+# z = x + y  #should be 17, since x,y are both int data types
+# print(z) # returned 17, so all is fine.
+
+# Print out various elements of the variable Name. Name = "Mocha Latte Spiced"
+# Name = "Mocha Latte Spiced"
+# print(Name[0])  #prints element 0 in Name, which is M
+# print(Name[6])  #prints element 6 in Name, which is L
+# Name = "Mocha Latte"  #calling Name to new value, "Mocha Latte"
+# print(Name)  #testing to confirm Name has new value, which it now does
+
+# Name = + " Not-Spiced"   #This does not append on a string, bad operand error
+
+# Name = "Mocha Latte" + " Unspiced"   #Appending " Unspiced" to Name and assigning this to Name.
+# print(Name)    #should print:Mocha Latte Unspiced if I did it correctly
+# It printed correctly!
+# Name = "Mocha"                     #reassigning Name
+# print(Name + " with Sugar added")  #printing Name plus a string expression, Let's see!
+# This worked!
+#    a   b   c   d    e   f   g   h      8 total characters
+#    0   1   2   3    4   5   6   7
+#   -8  -7  -6  -5   -4  -3  -2  -1
+
+word = "abcdefgh"
+# print(word[0])           # should print  a         it worked
+# print(word[0:3])         # should print  abc       it worked
+# print(word[-1])          # should print  h         it worked
+
+# print(word[-8:-4])       # should print  abcd      it worked
+# print(word[-5:-9])       # should print  dcba    it did not work
+                             # so given word is at least 1 element large, then element e must
+                             # be in set A = [0, n-1] OR [-n, -1]  where n = len(word) = 8
+                             # so -5 is fine, -9 is not in A. Thus Python stopped at this line.
+# print(word[-8:0])        # should print  abcdefgh  it didn't work
+                            # 0 is not in A
+# print(word[-8:7])        # should print abcdefgh   it printed abcdefg but left off h
+# print(word[-8:7] + "h")  # should print abcdefgh   it worked
+# print(len(word))         # should print 8          it worked    Utilizing the length function len
+# print(len(word) -1)      # should print 7          it worked    "  "
+
+# word = "abcdeabcde"           # redeclare    a    b    c    d    e    a    b    c    d    e
+                            #                0    1    2    3    4    5    6    7    8    9
+                            #              -10   -9   -8   -7   -6   -5   -4   -3   -2   -1
+
+# print(word[::2])          # should print every 2nd element, so acebde     it worked
+# print(word[::1])          # print abcdeabcde                              it worked
+# print(word[::3])          # print every 3rd element,        so adbe       it worked
+# print(word[0:7:2])        # print every 2nd element from 0 to before 7th element
+                            # so aceb                                       it worked
+# print(word[1:7:2])        # bda                                           it worked
+# print(word[-10:-5:2])     # ace                                           it worked
+
+# Name = "Robert"
+# Statement = Name + " is the best"       #Concatenate two strings
+# print(Statement)                        # Robert is the best
+
+# print(Name * 4)                         # RobertRobertRobertRobert
+
+
+
+# print(" Michael Jackson \n is the best" )     # New line escape sequence
+                                                #  Michael Jackson
+                                                #  is the best
+
+
+# print(" Michael Jackson \\ is the best" )     # Include back slash in string
+                                                # Michael Jackson \ is the best
+
+
+# print(r" Michael Jackson \n is the best" )    # r will tell python that string will be display as raw string
+                                                # Michael Jackson \n is the best
+
+
+
+# A = "Thriller is the sixth studio album."     # Convert all the characters in string to upper case
+# print("Before upper:" ,A)                     # before upper: Thriller is sixth studio album.
+# B = A.upper()
+# print("After upper:", B)                      # After upper: THRILLER IS SIXTH STUDIO ALBUM.
+                                                #  upper FUNCTION
+
+# print("1",2,3.14)                             # 1 2 3.14
+
+
+
+# A = "Michael Jackson is the best."            # Replace the old substring with the new target substring
+# B = A.replace('best', 'greatest')             # is the segment has been found in the string
+# print(B)                                      # Michael Jackson is the greatest.
+                                                #  .replace FUNCTION
+
+#
+
+# Name = "Michael Jackson"                      # Find the substring in the string. Only the index of the
+# Name.find('el')                               # first element of substring in string will be the output
+# print(Name.find('el'))                        # 5,     the fifth element of Name
+# Name.find('Jasdfasdasdf')                     # if substring is not in string, then .find returns -1
+# print(Name.find('Jasdfasdasdf'))              # -1
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# Consider the variable D use slicing to print out the first three elements:      QUIZ
+# D = "ABCDEFG"                                                                     #  QUIZ
+# print(D[0:3])                                 # ABC
+
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# Use a stride value of 2 to print out every second character of the string E:
+# E = 'clocrkr1e1c1t'
+# print(E[::2])                                 # correct
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# Print out a backslash:
+# print("\\")
+# \, print(r " \ ") would have also worked
+
+# QUIZ QUIZ QUIZ QUIZ
+# Convert the variable F to uppercase:
+#F = "You are wrong"
+#print(F.upper())                               # YOU ARE WRONG     I got it
+
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# Consider the variable G, and find the first index of the sub-string snow:
+# G = "Mary had a little lamb Little lamb, little lamb Mary had a little lamb \
+# Its fleece was white as snow And everywhere that Mary went Mary went, Mary went \
+# Everywhere that Mary went The lamb was sure to go"
+#print(G.find("snow"))                          # 95
+
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# In the variable G, replace the sub-string Mary with Bob:
+# G = "Mary had a little lamb Little lamb, little lamb Mary had a little lamb \
+# Its fleece was white as snow And everywhere that Mary went Mary went, Mary went \
+# Everywhere that Mary went The lamb was sure to go"
+# G.replace("Mary", "Bob"))                     # it worked
+
+# TUPLES
+
+# tuple example
+#                       Title          Length         Rating        UnitsSold
+#                       Desperado      3:46           7             140,000
+#                       Darkness       3:24           9             135,500
+#                       Yellow Album   2:59           6             110,000
+
+# now officially declared tuple
+# tuple1 = ("disco",10,1.2 )
+# print(tuple1)                         # ('disco', 10, 1.2)
+
+# tuple2 = ("Title","Length", "Rating","UnitsSold")
+# print(tuple2)                         # worked as I thought
+# print(type(tuple2))                   # <class 'tuple'>
+tuple1 = ("disco",10,1.2 )
+# print(tuple1[1],tuple1[0])              # worked
+
+# ("disco",  10,  1.2)
+#  0         1    2
+#  -3       -2   -1
+
+# print(tuple1[0])            # Print the variable on each index
+# print(tuple1[1])
+# print(tuple1[2])
+
+# Print the type of value on each index
+
+# print(type(tuple1[0]))               # <class 'str'>
+# print(type(tuple1[1]))               # <class 'int'>
+# print(type(tuple1[2]))               # <class 'float'>
+
+# print(tuple1[-2])                    # tuples are so far similar to strings
+
+
+
+# tuple2 = tuple1 + ("hard rock", 10)    # Concatenate two tuples
+# print(tuple2)                        # ('disco, 10, 1.2, 'hard rock', 10)
+# Slice from index 0 to index 2
+
+# print(tuple2[0:3])                   # sliced, resulted in ('disco', 10, 1.2)
+#                                      # len FUNCTION works on tuples just as on strings
+
+# A sample tuple
+
+# SORTING                              # SORTING
+# Ratings = (0, 9, 6, 5, 10, 8, 9, 6, 2)
+
+
+
+# RatingsSorted = sorted(Ratings)      # Sort the tuple
+
+# print(RatingsSorted)
+# print(sorted(Ratings))             # sort is a function that must be saved on a new variable
+# print(Ratings)
+
+
+
+# NestedT =(1, 2, ("pop", "rock") ,(3,4),("disco",(1,2)))       # Create a nest tuple
+# print(NestedT[2])                                             # prints 3rd element, a tuple ('pop', 'rock')
+# print(NestedT[2][0])                                          # prints 3rd element, 1st tuple element 'pop'
+# print(NestedT[2][0][1])                                       # prints o of pop
+# NESTED TUPLES   [general] [more specific] [very specific] [highly specific]      # NESTED TUPLES
+
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# Find the length of the tuple, genres_tuple:
+# genres_tuple = ("pop", "rock", "soul", "hard rock", "soft rock", \
+#                 "R&B", "progressive rock", "disco")
+# print(genres_tuple)                                           # I should get 8 for len
+# print(len(genres_tuple))                                      # 8
+
+# Access the element, with respect to index 3:
+# print(genres_tuple[3])                                        # hard rock
+
+# Use slicing to obtain indexes 3, 4 and 5:
+# print(genres_tuple[3:6])                                      # ('hard rock', 'soft rock', 'R&B')
+
+# Find the first two elements of the tuple genres_tuple:
+# genres_tuple[0]
+# genres_tuple[1]                                               # IBM quiz preferred slicing  genres_tuple[0:2]
+# genres_tuple[0:2]
+
+# Find the first index of "disco":
+#                                                               # I should get 7
+# print(genres_tuple.find['disco'])                             # must utilize .index not .find for tuples
+
+# Generate a sorted List from the Tuple, C_tuple = (-5, 1, -3):
+# C_tuple = (-5, 1, -3)
+# C_List = sorted(C_tuple)
+# print(D_tuple)
+
+# QUIZ QUIZ QUIZ QUIZ
+
+
+
+# LISTS
+
+L = ["Michael Jackson", 10.1, 1982]                           # Create a list
+
+# print('the same element using negative and positive indexing:\n Postive:',L[0],
+# '\n Negative:' , L[-3]  )
+# print('the same element using negative and positive indexing:\n Postive:',L[1],
+# '\n Negative:' , L[-2]  )
+# print('the same element using negative and positive indexing:\n Postive:',L[2],
+# '\n Negative:' , L[-1]  )
+
+
+
+# L = ["Michael Jackson", 10.1, 1982, [1, 2], ("A", 1)]   # Sample List. Lists can contain strings, floats, and
+                                                        # integers. We can nest other lists, and we can also
+                                                        # nest tuples and other data structures.
+# print(L[3][1])                                        # 2
+# L[3:5]                                                # returns 4th and 5th elements, [[1, 2], ('A', 1)]
+# Use extend to add elements to list
+
+# L = ["Michael Jackson", 10.2]
+# L.extend(['pop', 10])
+
+list1 = [1, 2, 3, [4,45], (1,2,"a")]                    # list1 has 5 elements
+# list1.extend("a",  10, "fifteen")                     # .extend takes only ONE argument
+# print(list1)                                          # I think this will print
+                                                        # [1, 2, 3, [4, 45], (1, 2, 'a'), 'a', 10, 'fifteen']
+                                                        # ERROR, since it was given 3 arguments not 1
+# list1.extend(["a", 10, "fifteen"])
+# print(list1)                                          # [1, 2, 3, [4, 45], (1, 2, 'a'), 'a', 10, 'fifteen']
+                                                        # has 8 elements, where list1
+
+# list1.append(["a", 10, "fifteen"])
+# print(list1)                                          # .append wants ONE argument as well.
+                                                        # [1, 2, 3, [4, 45], (1, 2, 'a'), ['a', 10, 'fifteen]
+                                                        # has 6 elements
+
+# .extend  VS  .append                                  # .append & . extend both take one argument
+#  EXTEND                                               # .extend will tack on all first order elements to the end
+#               APPEND                                  # .append will add the argument to the list, ie 1 longer
+
+# LISTS                                                 # CHANGING LISTS
+                                                        # by index/element reassigning
+# list2 = [1, 2, 3, "four"]
+#print("Before the change", list2)                      # Before the change [1, 2, 3, 'four']
+#list2[3] = 4                                           # change 4th element "four" to integer 4
+#print("After the change", list2)                       # After the change [1, 2, 3, 4]
+
+# LISTS                                                 # DELETING PARTS OF A LIST
+                                                        # by using del(list[element or elements])
+# list3 = [1,2,3]
+# del(list3[1])                                         # delete 2nd element 2
+# print(list3)                                          # [1,3]
+
+# LISTS                                                 # CONVERT STRINGS TO LISTS
+                                                        # by using .split
+                                                        # .split by default takes in argument of ' ' (ie a space char)
+# string1 = "three apples by the sea"
+# string1.split(' ')                                    # slits by ' '
+# print(string1)                                          # prints uneffected string1
+                                                        # three apples by the sea
+# print(string1.split(' '))                             # prints list ['three', 'apples', 'by', 'the', 'sea']   5 elements
+# string1.split('s')                                    # splits by 's'
+# print(string1.split('s'))                             # prints list [ 'three apple', 'by the ', 'ea']         3 elements
+
+# string2 = "1abc1abcd1ab1cd1e"                         # this should be a better tester string
+# string2.split('a')                                    # splits based on argument of 'a'
+# print(string2.split('a'))                             # should print list ['1', 'bc1', 'bcd1', 'b1cd1e']    it did
+
+                                                        # theorem:
+                                                        # if string has n of split argument, then list has n+1 elements
+
+# string2.split('1')                                    # splits based on argument of '1'
+# print(string2.split('1'))                             # should print list ['', 'abc', 'abcd', 'ab', 'cd', 'e']   it did
+                                                        # 6 elements as expected, theorem kinda proved
+
+# string2.split('1a')                                   # split by '1a'
+# print(string2.split('1a'))                            # prints list ['', 'bc', 'bcd', 'b1cd1e']    it worked
+
+# string2.split('f')                                    # should return a list with 1 element, namely string2
+                                                        # as the only element of the list
+# print(string2.split('f'))                             # should print list ['1abc1abcd1ab1cd1e']  IT WORKED!!!
+
+                                                        # .split cannot take an empty argument like '' though
+                                                        # '' as an argument throws an error
+# print(string2.split(''))                              # ValueError: empty separator
+
+# LISTS                                                 # LISTS
+# When we set one variable B equal to A; both A and B are referencing the same list in memory:
+
+# A = ["hard rock", 10, 1.2]                              # Copy (copy by reference) the list A
+# B = A
+# print('A:', A)
+# print('B:', B)
+
+# A.extend(['a'])
+# B = A
+# print('A:', A)                                        # both print ['hard rock', 10, 1.2, 'a']
+# print('B:', B)
+
+# B = A
+# A.extend(['a'])                                       # both print ['hard rock', 10, 1.2, 'a']
+# print('A:', A)
+# print('B:', B)
+
+
+
+# A = ["hard rock", 10, 1.2]                            # Examine the copy by reference
+# B = A
+# print('B[0]:', B[0])                                  # B[0] is 'hard rock',                      prints 'hard rock'
+# A[0] = "banana"                                       # B = A so B[i] = A[i] for all i in A
+# print('B[0]:', B[0])                                  # so B[0] = A[0], where A[0] is 'banana',   prints 'banana'
+
+#                                                       The above can be prevented or dealt with by:
+
+# Cloning via Clone By Value                            # Clone (clone by value) the list A
+# A = ["hard rock", 10, 1.2]
+# B = A[:]
+# print('B[0]:', B[0])
+# A[0] = "banana"
+# print('B[0]:', B[0])                                  # B[0] is still 'hard rock'
+# print('A[0]:', A[0])                                  # A[0] is 'banana'
+                                                        # Copy by Value         new_list = old_list[:]
+
+
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# Create a list a_list, with the following elements 1, hello, [1,2,3] and True.
+a_list = [1, 'hello', [1, 2, 3], True]               # just defining the list per specs, but using a_list
+
+# Find the value stored at index 1 of a_list.
+# a_list.index('0')                                  # index 1 should be 0th element,   wrong
+# a_list[1]                                          # keep it simple with lists,       correct
+
+# Retrieve the elements stored at index 1, 2 and 3 of a_list.
+# a_list[1:4]                                        #  correct
+
+# Concatenate the following lists A = [1, 'a'] and B = [2, 1, 'd']
+# A = [1, 'a',]
+# B = [2, 1, 'd']
+# C = A + B                                          # basically expression of EXTEND function on a list
+# print(C)                                           # [1, 'a', 2, 1, 'd']
+
+
+
+# DICTIONARIES                                       # DICTIONARIES
+                                                     # are analogous to LISTS. Lists have indexes as the header of
+                                                     # each general element (1st or basic/generalth element) of list
+                                                     # Dictionaries have KEYS, which are specifics like:
+                                                     # integers, strings, and similar objects
+
+# KEYS are always IMMUTABLE  &  UNIQUE
+# ie KEYS cannot be modifiable objects & KEYS cannot be duplicates of any other KEY
+# (Values that KEYS are headers/titles/etc etc can be rewritten/changed/modified/redefined)
+
+# Defining a generic dictionary
+# A = {"a":1,"b":2}                                  # "a" and "b" are KEYS
+                                                     # 1 and 2 are values
+B = {"Thriller":1982,"Back in Black":1980,"Dark Side of the Moon":1973}
+                                                     # B is yet a different dictionary, where
+                                                     # "Thriller", "Back in Black", and "Dark Side of the Moon" are
+                                                     # all KEYS of B.
+
+# Think of B like:  Thriller                        1982
+#                   Back in Black                   1980
+#                   Dark Side of the Moon           1973
+
+# Look up a value of the dictionary by using the key as an argument:
+# print(B["Thriller"])                               # 1982 is printed, argument is the KEY "Thriller"
+                                                     # "Thriller is like an MS Excel title for a given column
+
+# QUIZ QUIZ QUIZ QUIZ
+# What is the result of the following operation: Dict["D"]
+#Dict={"A":1,"B":"2","C":[3,3,3],"D":(4,4,4),'E':5,'F':6}
+#Dict["D"]                                          # returns (4, 4, 4)
+
+# We can APPEND on a DICTIONARY by just defining a new key and setting the value:
+# B["Biker Rock"] = 1977
+# print(B)                                          # should print B from line 441 with "Biker Rock: 1977}
+                                                    # at the end. Let's see!          It worked!!
+
+# We can DELETE on a DICTIONARY by using the del command.         del(DICTIONARY["deleteThisKEY"])
+                                                    # "deleteThisKEY" is the key to be deleted
+                                                    # DICTIONARY is B in the examples above
+
+# del(B["Back in Black"])                           # Deleting "Back in Black" key
+# print(B)                                          # should print {"Thriller":1982,"Dark Side of the Moon:1973}
+                                                    # NOTE: del acts on the original dictionary
+
+# We can see if a KEY is IN a DICTIONARY using the in command.    "isThisKEYin" in DICTIONARY
+                                                    # "isThisKEYin" is the key to be searched/checked for
+                                                    # DICTIONARY is B in the examples above
+
+# "Thiller" in B                                    # basically it returns a bool data type
+# print("Thriller" in B)                            # True, yep bool.
+# print("Greatest Hits" in B)                       # should be false, no KEY with that value.  printed False
+
+# GATHER/SEE/LOOK-AT all the KEYS of a DICTIONARY using      DICTIONARY.keys()
+# B.keys()                                          # Give me all da KEYS of B!
+# print(B.keys())                                   # dict_keys(['Thriller', 'Back in Black', 'Dark Side of the Moon']
+
+# GATHER/SEE/LOOK-AT all the VALUES of a DICTIONARY using    DICTIONARY.values()
+# B.values()
+# print(B.values())                                 # dict_values([1982, 1980, 1973])
+
+# Empty Dictionary
+# empty_Dictionary = {}
+
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# You will need this dictionary for the next two questions:
+# soundtrack_dic = {"The Bodyguard":"1992", "Saturday Night Fever":"1977"}
+
+# a) In the dictionary soundtrack_dict what are the keys?
+# soundtrack_dic.keys(['The Bodyguard', 'Saturday Night Fever'])
+# soundtrack_dic.keys() # The Keys "The Bodyguard" and "Saturday Night Fever"
+
+# b) In the dictionary soundtrack_dict what are the values?
+# soundtrac_dic.values(['1992', '1977']
+# soundtrack_dic.values() # The values are "1992" and "1977"
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# You will need this dictionary for the following questions:
+# The Albums Back in Black, The Bodyguard and Thriller have the following music recording
+# sales in millions 50, 50 and 65 respectively:
+
+# a) Create a dictionary album_sales_dict where the keys are the album name and the sales in millions are the values.
+# album_sales_dict = {"Back in Black":50,"The Bodyguard": 50,"Thriller":65}
+
+# b) Use the dictionary to find the total sales of Thriller:
+# album_sales_dict["Thriller"]
+
+# c) Find the names of the albums from the dictionary using the method keys:
+# album_sales_dict.keys()
+
+# Find the names of the recording sales from the dictionary using the method values:
+# album_sales_dict.values()
+
+
+
+# SETS
+
+# sets are a type of collection SO they are like lists and tuples where you can input different Python types
+# sets are Unordered. Different from lists and tuples since Sets do not record element position
+# sets ONLY have unique elements. Any particular element must be the only one of that kind
+
+# set1 = {"pop","rock","R&B","disco","country","rock", "metal","rock"}     # set1 has duplicate items
+                                                                           # When set1 is actually created, duplicates
+                                                                           # will just fall back to one entry of "rock"
+
+set1 = {"pop","rock","R&B","disco","country","metal"}
+
+# TYPECAST/convert a LIST into a SET using      set(LIST)
+# list1 = [1,2,3,2,2,2]                           # list1 has duplicate entries/elements
+# (set(list1)                                     # set(list1) creates a set such that each entry in the set is:
+                                                  #Unique and Unordered
+
+# ADD an entry to a SET                       using LIST.add("item2add")
+# set1.add("nu-metal")                       # returns {'country', 'metal', 'R&B', 'nu-metal', 'pop', 'rock', 'disco'}
+
+# REMOVE an entry from a SET                  using LIST.remove("item2remove")
+# set1.remove("metal")                       # returns {'pop', 'country', 'R&B', 'rock', 'disco'}
+
+# FIND/SEARCH-FOR an entry in a SET           using "itemSEARCH" in LIST
+# "R&B" in set1                              # returns Bool value
+
+# SET MATHEMATICS
+# Let A, B be sets and C a different set
+
+                                             # C is the INTERSECTION SET of A, B where every element
+# intersection set                           # of C is also an element of A and element of B is given by:
+                                             # C = A & B                                ...also given by:
+                                             # C = A.intersection(B)
+
+                                             # C is the UNION SET of A, B where any element
+# union set                                  # of C is either an element of A or an element of B is given by:
+                                             # C = A.union(B)
+
+                                             # C can be a SUPERSET of a set A if every element of A
+# superset                                   # is also an element of C. This set C is given by:
+                                             # C.issuperset(A)
+
+                                             # C can be a SUBSET of a set A if every element of C is also an element
+# subset                                     # of the set A. If it exists, this subset of a is given by:
+                                             # C.issubset(A)
+
+                                             # C is a DIFFERENCE SET of A if every element of C is an element
+# difference set                             # of set A, but not an element of B. This subset of A is given by:
+                                             # C = A.difference(B)
+                                             #                        C = B.difference(A) is a variation of A,B
+
+
+
+# QUIZ QUIZ QUIZ QUIZ
+
+# Convert the list ['rap','house','electronic music', 'rap'] to a set:
+# listL = ['rap','house','electronic music', 'rap']
+# music_set = set(listL)
+
+# Consider the list A = [1, 2, 2, 1] and set B = set([1, 2, 2, 1]), does sum(A) = sum(B)
+# A = [1, 2, 2, 1]
+# B = set([1, 2, 2, 1])
+# sum(A) == sum(B)                                                                  # returns False
+
+# Create a new set album_set3 that is the union of album_set1 and album_set2:
+# album_set1 = set(["Thriller", 'AC/DC', 'Back in Black'])
+# album_set2 = set([ "AC/DC", "Back in Black", "The Dark Side of the Moon"])
+# album_set3 = album_set1.union(album_set2)
+
+# Find out if album_set1 is a subset of album_set3:
+# album_set1.issubset(album_set3)                                                     # returns True
+
+# QUIZ QUIZ QUIZ QUIZ
+
+
+
+# CONDITIONS and BRANCHING                          # Conditions and Branching
+#
+# take an OPERAND, put a COMPARISON OPERATOR on it, and get a Bool value    # where:
+                                                    # OPERAND             ... is a value
+                                                    # COMPARISON OPERATOR ... is a condition
+
+# a = 6                                             # an operand
+# a == 7                                            # == compares value 7 to a via equality, returns False
+
+#  ==     ... is equivalent to?
+#  !=     ... is not equivalent to?
+#  >      ... is greater than?
+#  <      ... is less than
+#  >=     ... is greater than or equivalent to?
+#  <=     ... is less than or equivalent to?
+                                                    # Operand/values can strings, ints, floats, Bools
+
+# Inequality operation is also used to compare the letters/words/symbols
+# according to the ASCII value of letters. The decimal value shown in the
+# following table represents the order of the character:
+# For example, the ASCII code for ! is 21, while the ASCII code for + is 43.
+# Therefore + is larger than ! as 43 is greater than 21.
+# Similarly, the value for A is 101, and the value for B is 102 therefore:
+# 'B' > 'A'
+
+# When there are multiple letters, the first letter takes precedence in ordering:
+# 'BA' > 'AB'
+
+
+# Branching                                         # Branching
+
+# Branching allows us to run different statements for different inputs. It is
+# helpful to think of an if statement as a locked room, if the statement is True
+# we can enter the room and your program will run some predefined tasks, but if
+# the statement is False the program will ignore the task. For example, consider
+# the blue rectangle representing an ACDC concert. If the individual is older
+# than 18, they can enter the ACDC concert. If they are 18 or younger than 18
+# they cannot enter the concert. Use the condition statements learned before
+# as the conditions need to be checked in the if statement. The syntax is as
+# simple as  if condition statement :, which contains a word if, any condition
+# statement, and a colon at the end. Start your tasks which need to be executed
+# under this condition in a new line with an indent. The lines of code after the
+# colon and with an indent will only be executed when the if statement is True.
+# The tasks will end when the line of code does not contain the indent.
+#
+# In the case below, the tasks executed print(“you can enter”) only occurs
+# if the variable age is greater than 18 is a True case because this line of
+# code has the indent. However, the execution of print(“move on”) will not
+# be influenced by the if statement.
+#
+#
+# # If statement example
+# age = 19
+# #age = 18
+#
+# #expression that can be true or false
+# if age > 18:
+#
+#     #within an indent, we have the expression that is run if the condition is true
+#     print("you can enter" )
+#
+# #The statements after the if statement will run regardless if the condition is true or false
+# print("move on")
+#
+#
+# Else statement example
+#
+# age = 18
+# # age = 19
+#
+# if age > 18:
+#     print("you can enter" )
+# else:
+#     print("go see Meat Loaf" )
+#
+# print("move on")
+#
+#
+# Elif statment example
+
+# age = 18
+#
+# if age > 18:
+#     print("you can enter")
+# elif age == 18:
+#     print("go see Pink Floyd")
+# else:
+#     print("go see Meat Loaf")
+#
+# print("move on")
+
+
+# if (condition):                                          # Syntax
+
+# do something
+# else:
+
+# do something else
+
+# Logical operators allow you to combine or modify conditions.
+# and
+# or
+# not
+
+# if(album_year > 1979) and (album_year < 1990):           # Example
+# if not (album_year == '1984'):
+
+
+
+# Loops                                                    # Loops
+
+# Loops are used to repeat an operation many times.        # FOR LOOPS and WHILE LOOPS
+# We will use the range object.
+#
+#
+# range(3)                                                 #Use the RANGE
+                                                           # returns [0, 1, 2]
+                                                           # Range is an ordered list.
+
+# What is FOR LOOP?
+# The for loop enables you to execute a code block multiple times.
+# For example, you would use this if you would like to print out
+# every element in a list.
+
+
+
+# dates = [1982,1980,1973]      # For loop example
+# N = len(dates)
+
+# for i in range(N):
+#    print(dates[i])
+
+# The code in the indent is executed N times, each time the value of i is
+# increased by 1 for every execution. The statement executed is to print
+# out the value in the list at index i as shown here:
+
+# Use for loop to change the elements in list
+# squares = ['red', 'yellow', 'green', 'purple', 'blue']
+
+                                                                    # Changing the elements in a List
+# for i in range(0, 5):                                             # for i in [0, 1, 2, 3, 4]
+#     print("Before square ", i, 'is',  squares[i])                 # num of elements squares = num of el. in range(5)
+#     squares[i] = 'weight'                                         # slowly changes each entry of squares to "weight"
+#     print("After square ", i, 'is',  squares[i])
+
+# Loop through the list and iterate on both index and element value
+# squares = ['red', 'yellow', 'green', 'purple', 'blue']
+                                                                    # Accessing the index and elements in a List
+# for i, square in enumerate(squares):
+#     print(i, square)
+
+# WHILE LOOPS                                                       # WHILE LOOPS
+# While loops exist for when code needs to be executed based on a condition
+# This loop will continue until the condition returns false
+
+# While Loop Example
+
+# dates = [1982, 1980, 1973, 2000]
+# i = 0
+# year = 0
+
+# while(year != 1973):
+#     year = dates[i]
+#     i = i + 1
+#     print(year)
+
+# print("It took ", i ,"repetitions to get out of loop.")
+
+
+# FUNCTIONS                                                         # FUNCTIONS
+
+# reusable blocks of code that performs useful operations. Allows the
+# breakdown of tasks and do the same in other programs.
+
+# Pre-defined functions and User defined functions
+
+#Functions blocks begin def followed by the function name and parentheses ().
+# There are input parameters or arguments that should be placed within these parentheses.
+# You can also define parameters inside these parentheses.
+# There is a body within every function that starts with a colon (:) and is indented.
+# You can also place documentation before the body
+# The statement return exits a function, optionally passing back a value
+
+
+# def add(a):                         # First function example: Add 1 to a and store as b
+#     b = a + 1
+#     print(a, "if you add one", b)
+#     return(b)
+
+# help(add)                           # Get a help on add function
+
+# add(1)                              # Call the function add()
+# add(2)                              # Call the function add()   *different answer then above
+
+
+
+# def Mult(a, b):                     # Define a function for multiple two numbers
+#    c = a * b
+#    return(c)
+
+                                      # Use mult() multiply two integers
+                                      # Mult(2, 3)
+
+                                      # Use mult() multiply two floats
+                                      # Mult(10.0, 3.14)
+
+                                      # Use mult() multiply two different type values together
+                                      # Mult(2, "Michael Jackson ")
+
+
+# FUNCTIONS and VARIABLES                           # FUNCTIONS and VARIABLES
+
+# The input to a function is called a Formal Parameter.
+# A variable that is declared inside a function is called a
+# Local Variable. The parameter only exists within the
+# function (i.e. the point where the function starts and stops).
+# A variable that is declared outside a function definition is
+# a Global Variable, and its value is accessible and modifiable
+# throughout the program.
+
+# def square(a):                                    # Function Definition
+#     # Local variable b
+#     b = 1
+#     c = a * a + b
+#     print(a, "if you square + 1", c)
+#     return(c)
+                                                    # Example
+# x = 3                                             # Initializes Global variable
+# y = square(x)                                     # Makes function call and return function a y
+
+                                                    # Example
+# square(2)                                         # Directly enter a number as parameter
+
+# NOTE: If there is no return statement, the function returns None.
+# The following two functions are equivalent:
+
+# Define unctions, one with return value None, other without return value
+
+# def MJ():
+#     print('Michael Jackson')
+
+
+# def MJ1():
+#     print('Michael Jackson')
+#     return (None)
+
+# def con(a, b):                                    # Define the function for combining strings
+#     return(a + b)
+
+# Many Pre-Defined Functions like:
+# print()
+# sum()
+# len()
+
+
+# Using if/else Statements and Loops in FUNCTIONS
+# The return() function is particularly useful if you have any IF
+# statements in the function, when you want your output to be
+# dependent on some condition:
+
+# Function example
+
+# def type_of_album(artist, album, year_released):
+#     print(artist, album, year_released)
+#     if year_released > 1980:
+#         return "Modern"
+#     else:
+#         return "Oldie"
+
+# x = type_of_album("Michael Jackson", "Thriller", 1980)
+# print(x)
+
+
+# Setting DEFAULT ARGUMENT VALUES in your custom function
+
+# def isGoodRating(rating=4):                         # Example for setting param with default value
+#     if (rating < 7):
+#         print("this album sucks it's rating is", rating)
+
+#     else:
+#         print("this album is good its rating is", rating)
+
+
+# GLOBAL VARIABLES w/ FUNCTIONS                       # GLOBAL VARIABLES w/ FUNCTIONS
+
+# all variables in a function are limited to their existence in the function
+# but we can create global variables from a function like:
+# artist = "Michael Jackson"
+# def printer(artist):
+#     global internal_var
+#     internal_var= "Whitney Houston"
+#     print(artist,"is an artist")
+# printer(artist)
+# printer(internal_var)
+
+# myFavouriteBand = "AC/DC"                           # Example of global variable
+# def getBandRating(bandname):
+#     if bandname == myFavouriteBand:
+#         return 10.0
+#     else:
+#         return 0.0
+# print("AC/DC's rating is:", getBandRating("AC/DC"))
+# print("Deep Purple's rating is:",getBandRating("Deep Purple"))
+# print("My favourite band is:", myFavouriteBand)
+
+# def getBandRating(bandname):                        # Example of local variable
+#     myFavouriteBand = "AC/DC"
+#     if bandname == myFavouriteBand:
+#         return 10.0
+#     else:
+#         return 0.0
+# print("AC/DC's rating is: ", getBandRating("AC/DC"))
+# print("Deep Purple's rating is: ", getBandRating("Deep Purple"))
+# print("My favourite band is", myFavouriteBand)
